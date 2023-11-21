@@ -1,5 +1,5 @@
-// import React, { useState, useEffect } from 'react';
-// import JoueurService from '../services/JoueurService';
+import React, { useState, useEffect } from 'react';
+import JoueurService from '../services/JoueurService';
 import '../css/bootstrap.min.css';
 import '../css/stylelist.css';
 function ListeJoueur() {
@@ -24,6 +24,7 @@ function ListeJoueur() {
         <table class="table table-striped custom-table">
           <thead>
           {joueurs.map((joueur) => (
+
             <tr>
             
               <th scope="col">Order</th>
