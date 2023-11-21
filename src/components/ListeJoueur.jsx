@@ -23,7 +23,8 @@ function ListeJoueur() {
 
         <table class="table table-striped custom-table">
           <thead>
-          {joueurs.map((joueur) => (
+        
+
 
             <tr>
             
@@ -47,11 +48,12 @@ function ListeJoueur() {
               <th scope="col">BP</th>
               <th scope="col">FP</th>
             </tr>
-            ))}
+          
           </thead>
           <tbody>
+          {joueurs.map((joueur) => (
             <tr >   
-                     <td>Option</td>
+                     <td>{joueur.count}</td>
                      <td>Option</td>
                      <td>Option</td>
                      <td>Option</td>
@@ -72,7 +74,7 @@ function ListeJoueur() {
                      <td>Option</td>
             
             </tr>
-            
+            ))}
           </tbody>
         </table>
       </div>
