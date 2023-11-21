@@ -3,7 +3,7 @@ import JoueurService from '../services/JoueurService';
 import '../css/bootstrap.min.css';
 import '../css/stylelist.css';
 function ListeJoueur() {
-    const [joueurs, setJoueurs] = useState([]);
+    // const [joueurs, setJoueurs] = useState([]);
 
     // useEffect(() => {
     //     JoueurService.getJoueurs().then((res) => {
@@ -24,10 +24,6 @@ function ListeJoueur() {
 
         <table class="table table-striped custom-table">
           <thead>
-            { 
-            joueurs
-            }
-          {joueurs.map((joueur) => (
             <tr>
               
               <th scope="col">Order</th>
@@ -50,7 +46,6 @@ function ListeJoueur() {
               <th scope="col">BP</th>
               <th scope="col">FP</th>
             </tr>
-             ))}
           </thead>
           <tbody>
             <tr scope="row">   
