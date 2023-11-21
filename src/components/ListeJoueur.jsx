@@ -11,7 +11,7 @@ function ListeJoueur() {
     //     });
     // }, []); // The empty dependency array indicates that this effect should run only when the component mounts
     return (
-  <body>
+  <div>
   
 
   <div class="content">
@@ -79,7 +79,7 @@ function ListeJoueur() {
     </div>
 
   </div>
-  </body>
+  </div>
     );
 }
 
