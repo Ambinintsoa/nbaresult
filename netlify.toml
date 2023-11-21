@@ -1,0 +1,4 @@
+[build]
+  command = "your-build-command"
+  publish = "your-publish-directory"
+  environment = { CI = "false" }
