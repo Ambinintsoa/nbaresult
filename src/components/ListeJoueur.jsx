@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+// import React, { useState, useEffect } from 'react';
 // import JoueurService from '../services/JoueurService';
 import '../css/bootstrap.min.css';
 import '../css/stylelist.css';
