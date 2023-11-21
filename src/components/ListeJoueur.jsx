@@ -3,13 +3,13 @@
 import '../css/bootstrap.min.css';
 import '../css/stylelist.css';
 function ListeJoueur() {
-    // const [joueurs, setJoueurs] = useState([]);
+    const [joueurs, setJoueurs] = useState([]);
 
-    // useEffect(() => {
-    //     JoueurService.getJoueurs().then((res) => {
-    //         setJoueurs(res.data);
-    //     });
-    // }, []); // The empty dependency array indicates that this effect should run only when the component mounts
+    useEffect(() => {
+        JoueurService.getJoueurs().then((res) => {
+            setJoueurs(res.data);
+        });
+    }, []); // The empty dependency array indicates that this effect should run only when the component mounts
     return (
   <div>
   
@@ -23,8 +23,9 @@ function ListeJoueur() {
 
         <table class="table table-striped custom-table">
           <thead>
+          {joueurs.map((joueur) => (
             <tr>
-              
+            
               <th scope="col">Order</th>
               <th scope="col">Player</th>
               <th scope="col">Team</th>
@@ -45,6 +46,7 @@ function ListeJoueur() {
               <th scope="col">BP</th>
               <th scope="col">FP</th>
             </tr>
+            ))}
           </thead>
           <tbody>
             <tr >   
