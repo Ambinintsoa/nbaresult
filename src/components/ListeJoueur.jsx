@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import JoueurService from '../services/JoueurService';
+import axios from 'axios';
+// import JoueurService from '../services/JoueurService';
 import '../css/bootstrap.min.css';
 import '../css/stylelist.css';
 function ListeJoueur() {
-    const [joueurs, setJoueurs] = useState([]);
 
-    useEffect(() => {
-        JoueurService.getJoueurs().then((res) => {
-            setJoueurs(res.data);
-        });
-    }, []); // The empty dependency array indicates that this effect should run only when the component mounts
+
+  const [playerData, setPlayerData] = useState([]);
+
+  useEffect(() => {
+    axios.get('https://catfact.ninja/fact')
+      .then(response => setPlayerData([response.data]))
+      .catch(error => console.error('Error fetching data:', error));
+  }, []);// The empty dependency array indicates that this effect should run only when the component mounts
     return (
   <div>
   
@@ -51,9 +54,9 @@ function ListeJoueur() {
           
           </thead>
           <tbody>
-          {joueurs.map((joueur) => (
+          {playerData.map((joueur) => (
             <tr >   
-                     <td>{joueur.count}</td>
+                     <td>{joueur.fact}</td>
                      <td>Option</td>
                      <td>Option</td>
                      <td>Option</td>
