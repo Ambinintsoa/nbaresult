@@ -17,7 +17,6 @@ function ListeJoueur() {
   <div class="content">
     
     <div class="container">
-      <h2 class="mb-5"></h2>
       
 
       <div class="table-responsive">
