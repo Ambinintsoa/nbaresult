@@ -48,7 +48,7 @@ function ListeJoueur() {
             </tr>
           </thead>
           <tbody>
-            <tr scope="row">   
+            <tr >   
                      <td>Option</td>
                      <td>Option</td>
                      <td>Option</td>
